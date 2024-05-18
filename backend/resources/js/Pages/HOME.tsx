@@ -1,6 +1,6 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
-function App() {
+import {Link} from "react-router-dom";
+function Home() {
     return (
         <div className="container mt-5">
             <div className="row justify-content-center">
@@ -8,6 +8,7 @@ function App() {
                     <div className="card">
                         <div className="card-header">Home Component</div>
                         <div className="card-body">I'm an home component!</div>
+                        <Link to={'/page'} className="btn btn-primary">Pageへ遷移</Link>
                     </div>
                 </div>
             </div>
@@ -15,6 +16,4 @@ function App() {
     );
 }
 
-const container = document.getElementById('app');
-const root = createRoot(container);
-root.render(<App />);
+export default Home;
